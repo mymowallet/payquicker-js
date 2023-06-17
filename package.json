@@ -1,0 +1,55 @@
+{
+  "version": "2020.2.24",
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "dist/cjs/index.js",
+  "typings": "dist/types/index.d.ts",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=14.17.0"
+  },
+  "scripts": {
+    "build": "rm -rf dist & tsc -p tsconfig.esm.json & tsc -p tsconfig.cjs.json",
+    "test": "jest --coverage --passWithNoTests",
+    "lint": "eslint --ignore-path .eslintignore --ext .js,.ts .",
+    "prepare": "rm -rf dist & tsc -p tsconfig.esm.json & tsc -p tsconfig.cjs.json"
+  },
+  "peerDependencies": {},
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "pq-api-v-2-lib",
+  "description": "PayQuicker offers a secure and instant payout platform that delivers payment to a payee-owned and insured bank account linked to a debit card, similar to a standard checking account.  As soon as the payment is made, funds are available in the insured account and available to spend instantly online through a virtual card, at retail with a plastic prepaid debit card, or by loading the card to a mobile wallet.  PayQuicker provides a RESTful API that allows authorized clients to send and receive payments, debit user's accounts for spendback, retrieve user account balance, retrieve user reports, and retrieve transaction reports.",
+  "author": {
+    "name": "PayQuicker Support",
+    "email": "support@payquicker.com",
+    "url": "https://www.payquicker.com"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "eslint": "^8.34.0",
+    "jest": "^29.4.3",
+    "ts-jest": "^29.0.5",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@apimatic/authentication-adapters": "^0.3.0",
+    "@apimatic/axios-client-adapter": "^0.2.0",
+    "@apimatic/core": "^0.10.0",
+    "@apimatic/schema": "^0.7.0"
+  },
+  "bugs": {
+    "url": "https://www.payquicker.com",
+    "email": "support@payquicker.com"
+  }
+}
